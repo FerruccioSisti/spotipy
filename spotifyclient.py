@@ -57,8 +57,7 @@ class SpotifyClient:
         response_json = response.json()
 
         #Create playlist
-        print(response_json)
-        playlist_id = response_json["id"]
+        playlist_id = response_json.get("id", None)
         playlist = Playlist(name, playlist_id)
         return playlist
 
@@ -72,7 +71,7 @@ class SpotifyClient:
         tracks_uris = [track.create_spotify_uri() for track in tracks]
         data = json.dumps(tracks_uris)
         url = f"https://api.spotify.com/v1/playlists/{playlist.id}/tracks"
-        response = self.place_post_api_request(url, data)
+        response = self._place_post_api_request(url, data)
         response_json = response.json()
         return response_json
 
