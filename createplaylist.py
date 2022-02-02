@@ -14,7 +14,7 @@ def main():
         print(f"{index+1}- {track}")
     
     #choose which tracks you want to use as a seed to generate a new playlist
-    indexes = input("Enter a list of up to 5 tracks you'd like to use as seeds. Use indexes separated byu a space:")
+    indexes = input("Enter a list of up to 5 tracks you'd like to use as seeds. Use indexes separated by a space:")
     indexes = indexes.split()
     seed_tracks = [last_played_tracks[int(index)-1] for index in indexes]
 
