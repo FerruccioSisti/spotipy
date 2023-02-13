@@ -1,6 +1,7 @@
 class Playlist:
     """Playlist represents a Spotify playlist"""
 
+
     def __init__(self, name, id):
         """
         :param name (str): Playlist name

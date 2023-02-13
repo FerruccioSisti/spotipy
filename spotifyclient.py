@@ -3,6 +3,7 @@ import requests
 from track import Track
 from playlist import Playlist
 
+
 class SpotifyClient:
     """performs operations using Spotify API"""
 
@@ -14,7 +15,7 @@ class SpotifyClient:
         self.authorization_token = authorization_token
         self.user_id = user_id
 
-    def get_last_played_tracks(self, limit=10):
+    def get_last_played_tracks(self, limit=50):
         """ Get the last n tracks played by a user
         :param limit (int): Number of tracks to get. Should be <=50
         :return tracks (list of Track): List of last played tracks

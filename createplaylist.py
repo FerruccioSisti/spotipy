@@ -3,7 +3,7 @@ from spotifyclient import SpotifyClient
 
 def main():
     #instantiate spotify client
-    spotify_client = SpotifyClient(os.getenv("SPOTIFY_AUTHORIZATION_TOKEN"), os.getenv("SPOTIFY_USER_ID"))
+    spotify_client = SpotifyClient(os.getenv("SPOTIFY_AUTH_TOKEN"), os.getenv("SPOTIFY_USER_ID"))
 
     #get last played tracks
     num_tracks_to_visualize = int((input("How many tracks would you like to visualize/take data from?")))

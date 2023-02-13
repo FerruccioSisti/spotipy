@@ -1,6 +1,7 @@
 class Track:
     """Represents a piece of music (song)"""
 
+
     def __init__(self, name, id, artist):
         """
         :param name (str): Track name
